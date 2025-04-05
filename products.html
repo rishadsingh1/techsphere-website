@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | TechSphere</title>
+  <link rel="stylesheet" href="css/products page style.css" />
+</head>
+<body>
+
+<header>
+	<a href="index.html">
+		<img src="images/logo.png" alt="TechSphere Logo" class="logo" />
+  </a>
+  
+  <h1>TechSphere Products</h1>
+  <div class= "search-filter">
+  <input type="text" id="searchBar" placeholder="Search for products..." onkeyup="searchProducts()">
+  <select id="categoryFilter" onchange="filterProducts()">
+    <option value="all">All Categories</option>
+    <option value="laptop">Laptops</option>
+    <option value="smartphone">Smartphones</option>
+    <option value="accessory">Tech Accessories</option>
+    <option value="gaming">Gaming Products</option>
+  </select>
+  </div>
+  <a href="cart.html" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a>
+</header>
+
+<main>
+  <section id="products-container">
+
+    <!-- HP Pavilion SE 15 -->
+    <article class="product-card laptop">
+      <img src="images/hp-pavilion-se15.jpg" alt="HP Pavilion SE 15">
+      <h2>HP Pavilion SE 15</h2>
+      <p><strong>OS:</strong> Windows 11 Home</p>
+      <p><strong>Processor:</strong> Intel® Core™ i5 1334U (13th Gen)</p>
+      <p><strong>Memory:</strong> 8GB RAM | <strong>Storage:</strong> 512GB SSD</p>
+      <p><strong>Display:</strong> 15.6" FHD (1920 x 1080)</p>
+      <p><strong>Graphics:</strong> Intel® Iris® Xᶱ Graphics</p>
+      <p class="price">TT$4,648.09</p>
+      <button class="view-more" onclick="window.location.href='product-details/hp-pavilion-se15.html'">View More</button>
+      <button class="add-to-cart" onclick="addToCart('HP Pavilion SE 15', 4648.09, 'images/hp-pavilion-se15.jpg')">Add to Cart</button>
+    </article>
+
+    <!-- HP Envy 16 x360 -->
+    <article class="product-card laptop">
+      <img src="images/hp-envy-x360.jpg" alt="HP Envy 16 x360">
+      <h2>HP Envy 16&quot; x360</h2>
+      <p><strong>OS:</strong> Windows 11 Home</p>
+      <p><strong>Processor:</strong> Intel® Core™ Ultra 5 125U</p>
+      <p><strong>Memory:</strong> 16GB RAM | <strong>Storage:</strong> 1TB SSD</p>
+      <p><strong>Display:</strong> 16" 3K OLED Touchscreen (2880 x 1800) | 120Hz Refresh Rate</p>
+      <p><strong>Graphics:</strong> Intel® Graphics</p>
+      <p class="price">TT$9,199.89</p>
+      <button class="view-more" onclick="window.location.href='product-details/hp-envy-x360.html'">View More</button>
+      <button class="add-to-cart" onclick="addToCart('HP Envy 16 x360', 9199.89, 'images/hp-envy-x360.jpg')">Add to Cart</button>
+    </article>
+
+    <!-- Samsung Galaxy A36 -->
+    <article class="product-card smartphone">
+      <img src="images/galaxy-a36.jpg" alt="Samsung Galaxy A36">
+      <h2>Samsung Galaxy A36 5G</h2>
+      <p><strong>Display:</strong> 6.7" FHD+ Super AMOLED</p>
+      <p><strong>Storage:</strong> 128GB (Expandable up to 1TB)</p>
+      <p><strong>Fingerprint Sensor:</strong> Optical (On-Screen)</p>
+      <p><strong>Camera:</strong> 50MP (Main) | 8MP (Ultra Wide) | 5MP (Macro) | 12MP (Front)</p>
+      <p><strong>Durability:</strong> IP67 Water & Dust Resistance</p>
+      <p class="price">TT$2,799.99</p>
+      <button class="view-more" onclick="window.location.href='product-details/galaxy-a36.html'">View More</button>
+      <button class="add-to-cart" onclick="addToCart('Samsung Galaxy A36', 2799.99, 'images/galaxy-a36.jpg')">Add to Cart</button>
+    </article>
+
+    <!-- Samsung Galaxy A26 -->
+    <article class="product-card smartphone">
+      <img src="images/galaxy-a26.jpg" alt="Samsung Galaxy A26">
+      <h2>Samsung Galaxy A26 5G</h2>
+      <p><strong>Display:</strong> 6.7" FHD+ Super AMOLED</p>
+      <p><strong>Storage:</strong> 128GB (Expandable up to 1TB)</p>
+      <p><strong>Fingerprint Sensor:</strong> Side-Mounted</p>
+      <p><strong>Camera:</strong> 50MP (Main) | 8MP (Ultra Wide) | 2MP (Macro) | 13MP (Front)</p>
+      <p><strong>Durability:</strong> IP67 Water & Dust Resistance</p>
+      <p class="price">TT$2,099.99</p>
+      <button class="view-more" onclick="window.location.href='product-details/galaxy-a26.html'">View More</button>
+      <button class="add-to-cart" onclick="addToCart('Samsung Galaxy A26', 2099.99, 'images/galaxy-a26.jpg')">Add to Cart</button>
+    </article>
+
+    <!-- Tech Accessories -->
+    <article class="product-card accessory">
+      <img src="images/galaxy-buds2-pro.jpg" alt="Galaxy Buds 2 Pro">
+      <h2>Samsung Galaxy Buds 2 Pro</h2>
+      <p>Active Noise Cancellation</p>
+      <p class="price">TT$1,299.00</p>
+      <button class="view-more" onclick="window.location.href='product-details/galaxy-buds2-pro.html'">View More</button>
+      <button class="add-to-cart" onclick="addToCart('Samsung Galaxy Buds 2 Pro', 1299.00, 'images/galaxy-buds2-pro.jpg')">Add to Cart</button>
+    </article>
+
+    <article class="product-card accessory">
+      <img src="images/apple-airpods-pro.jpg" alt="Apple AirPods Pro 2">
+      <h2>Apple AirPods Pro (2nd Gen)</h2>
+      <p>Spatial Audio, Noise Cancellation</p>
+      <p class="price">TT$1,599.00</p>
+      <button class="view-more" onclick="window.location.href='product-details/apple-airpods-pro.html'">View More</button>
+      <button class="add-to-cart" onclick="addToCart('Apple AirPods Pro 2', 1599.00, 'images/apple-airpods-pro.jpg')">Add to Cart</button>
+    </article>
+
+    <!-- Gaming Products -->
+    <article class="product-card gaming">
+      <img src="images/playstation-5.jpg" alt="PlayStation 5">
+      <h2>PlayStation 5</h2>
+      <p>825GB SSD, 4K Gaming</p>
+      <p class="price">TT$6,499.00</p>
+      <button class="view-more" onclick="window.location.href='product-details/playstation-5.html'">View More</button>
+      <button class="add-to-cart" onclick="addToCart('PlayStation 5', 6499.00, 'images/playstation-5.jpg')">Add to Cart</button>
+    </article>
+
+	<!-- Additional Service Offerings -->
+    <article class="product-card web-development">
+        <h2>Website Development</h2>
+        <p>Custom-built responsive websites.</p>
+    </article>
+    
+    <article class="product-card cloud-solutions">
+        <h2>Cloud Hosting</h2>
+        <p>Secure and scalable cloud services.</p>
+    </article>
+
+    <article class="product-card it-consultancy">
+        <h2>IT Consultation</h2>
+        <p>Expert advice for business growth.</p>
+    </article>
+	
+    <article class="product-card gaming">
+      <img src="images/xbox-series-x.jpg" alt="Xbox Series X">
+      <h2>Xbox Series X</h2>
+      <p>1TB SSD, 4K Gaming</p>
+      <p class="price">TT$5,999.00</p>
+      <button class="view-more" onclick="window.location.href='product-details/xbox-series-x.html'">View More</button>
+      <button class="add-to-cart" onclick="addToCart('Xbox Series X', 5999.00, 'images/xbox-series-x.jpg')">Add to Cart</button>
+    </article>
+
+  </section>
+</main>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+
+</body>
+</html>
