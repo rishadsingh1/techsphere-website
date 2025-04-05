@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Detail | HP Pavilion SE 15 | TechSphere</title>
+  <link rel="stylesheet" href="../css/products page style.css" />
+</head>
+<body>
+
+  <!-- Header with Logo, Nav and Cart -->
+  <header>
+    <div class="logo">
+      <img src="../images/logo.jpg" alt="TechSphere Logo">
+    </div>
+    
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../products.html">Products</a></li>
+        <li><a href="../form.html">User Input Form</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div id="cart">
+      🛒 Cart: <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- Main Product Detail Content -->
+  <main>
+    <section id="product-detail">
+      <article class="product-detail-card">
+        <img src="../images/hp-pavilion-se15.jpg" alt="HP Pavilion SE 15">
+        <h2>HP Pavilion SE 15</h2>
+        <p><strong>OS:</strong> Windows 11 Home</p>
+        <p><strong>Processor:</strong> Intel® Core™ i5 1334U (13th Gen)</p>
+        <p><strong>Memory:</strong> 8GB RAM | <strong>Storage:</strong> 512GB SSD</p>
+        <p><strong>Display:</strong> 15.6" FHD (1920 x 1080)</p>
+        <p><strong>Graphics:</strong> Intel® Iris® Xᶱ Graphics</p>
+        <p class="price">TT$4,648.09</p>
+
+        <div class="product-actions">
+          <button class="add-to-cart" onclick="addToCart('HP Pavilion SE 15', 4648.09, '../images/hp-pavilion-se15.jpg')">Add to Cart</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="../js/script.js"></script>
+  <script src="../js/cart.js"></script>
+  <script>
+    window.onload = function () {
+      updateCartCount();
+    };
+  </script>
+
+</body>
+</html>
