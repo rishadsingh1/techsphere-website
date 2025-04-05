@@ -1,0 +1,23 @@
+ /* Spinner styles (can also be added to your main CSS file) */
+        .spinner {
+            display: none;
+            width: 30px;
+            height: 30px;
+            border: 3px solid #ccc;
+            border-top: 3px solid #007BFF;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 10px auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        #successMessage {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+        }
